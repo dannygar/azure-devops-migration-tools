@@ -107,7 +107,7 @@ namespace VstsSyncMigrator.Engine
             if (config.BasePaths != null && config.BasePaths.Any())
             {
                 var split = nodePath.Split('\\');
-                var removeProjectAndType = split.Skip(3);
+                var removeProjectAndType = split.Skip(2);
                 var path = string.Join(@"\", removeProjectAndType);
                 
                 // We need to check if the path is a parent path of one of the base paths, as we need those
